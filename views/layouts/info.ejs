@@ -1,0 +1,25 @@
+<% var list = info[0] %> 
+<div class="container-utama">
+    <main>
+        <h5 class="tanggal"><i class="far fa-clock"></i><%= list["tanggal"] %>  </h5>
+
+        <ul class="title">
+            <li>
+                <h3>O</h3>
+                <h1><%= list["judul"]  %> </h1>
+            </li>
+        </ul>
+        <img src="informasi/<%= list["gambar"] %>" class="gambar-kegiatan" alt="">
+        <p class="tab"><%= list["content"] %> </p>
+        </main>
+
+    <section>
+        <div class="quote">
+            <img src="quote2.jpg" alt="">
+        </div>
+        <div class="quote">
+            <img src="quote1.jpg" alt="">
+        </div>
+        
+    </section>
+</div>

@@ -1,0 +1,42 @@
+<div class="inputdata">
+    <div class="add">
+        <a href="/add-daftar?add=add-daftar&halaman=<%-title%>" class="btn btn-outline-secondary">Add New Data</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+                <tr class="daftar-head">
+                    <th >No</th> 
+                    <th >NAMA</th>
+                    <th >NUPTK</th>
+                    <th >JK</th>
+                    <th >NIP</th>
+                    <th >Status Kepegawaian</th>
+                    <th >Jenis PTK</th>
+                    <th >Agama</th>
+                    <th>Aksi</th>
+                </tr>
+        <% var i = 0 %> 
+        <% array.forEach(element => { %>
+        <% i++ %>
+                <tr>
+                    <td><%= i %> </td>
+                    <td><%= element["nama"]  %> </td>
+                    <td><%= element["nuptk"] %></td>
+                    <td><%= element["jk"] %></td>
+                    <td><%= element["nip"] %> </td>
+                    <td><%= element["status"] %> </td>
+                    <td><%= element["jenis"] %> </td>
+                    <td><%= element["agama"] %> </td>
+                    <td><div class="inputisi">
+                            <div class="flexrow">
+                            <a href="/update-daftar?update=update-daftar&halaman=<%- element["title"] %>&field=<%- element["id"] %> " class="btn btn-secondary">Update</a>  
+                            <a href="/pull-daftar?halaman=<%- element["title"] %>&field=<%- element["id"] %> " class="btn btn-danger">Delete</a>  
+                            </div>       
+                        </div>
+                    </form>
+                    </td>
+                </tr>
+        <% }); %> 
+            </table>
+    </div>
+</div>

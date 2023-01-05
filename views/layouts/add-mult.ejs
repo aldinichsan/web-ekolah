@@ -1,0 +1,14 @@
+<div class="inputdata">
+    <form action="/add-mult" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="halaman" value=" ">
+        <input type="hidden" name="title" value="<%- element %>">  
+        <input type="file" name="gambar">
+        <div class="inputisi">
+            <label for="judul"><b> judul Content : </b></label>
+            <input type="text" name="judul" value="">
+            <label for="bagian"><b> isi Content : </b></label>
+            <textarea class="update" type="text" name="bagian" value=""></textarea>        
+        </div>  
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<div class="inputdata">
+    <center><h1>Form Data Pegawai Baru </h1></center> 
+        
+    <form action="/add-daftar" method="post">
+        <% var i = 0 %> 
+        <input type="hidden" name="halaman" value="">
+        <input type="hidden" name="title" value="<%- element %>">  
+        <div class="inputisi">
+            <div class="horizontal">
+                <label for="nama"><b> Nama : </b></label>
+                <input type="text" name="nama" value="">
+            </div>
+            <div class="horizontal">
+                <label for="nuptk"><b> NUPTK :</b></label>
+                <input type="number" name="nuptk" value="">
+            </div>
+            <div class="horizontal">
+                <label for="jk"><b>Jenis Kelamin :</b></label>
+                <input type="radio" name="jk" id="L" value="L"><label for="L">Laki - Laki</label>
+                <input type="radio" name="jk" id="P" value="P"><label for="P">Perempuan</label>
+            </div>
+            <div class="horizontal">
+                <label for="nip"><b>Nip :</b></label>
+                <input  type="number" name="nip" value="">
+            </div>
+            <div class="horizontal">
+                <label for="status"><b>Status :</b></label>
+                <input type="text" name="status" value="">
+            </div>
+            <div class="horizontal">
+                <label for="jenis"><b>Jenis jabatan :</b></label>
+                <input type="text" name="jenis" value="">
+            </div>
+            <div class="horizontal">
+                <label for="agama"><b>Agama :</b></label>
+                <input type="text" name="agama" value="">
+            </div>
+        </div>  
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+</div>

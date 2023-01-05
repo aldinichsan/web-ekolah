@@ -1,0 +1,47 @@
+<div class="container-utama">
+    <main class="daftar-main">
+        <h5 class="tanggal"><i class="far fa-clock"></i>Date <%= date %> </h5>
+
+        <ul class="title">
+            <li>
+                <h3>O</h3>
+                <h1><%= judul %> </h1>
+            </li>
+        </ul>
+        <div class="isi-section">
+            <div class="table-responsive">
+            <table class="table">
+                <tr class="daftar-head">
+                    <th  >NO</th>
+                    <th >NAMA</th>
+                    <th >NUPTK</th>
+                    <th >JK</th>
+                    <th >NIP</th>
+                    <th >Status Kepegawaian</th>
+                    <th >Jenis PTK</th>
+                    <th >Agama</th>
+                </tr>
+        <% var i = 0 %> 
+        <% isinya.forEach(element => { %>
+        <% i++ %>
+                <tr>
+                    <td><%= i %> </td>
+                    <td><%= element.nama  %> </td>
+                    <td><%= element.nuptk %></td>
+                    <td><%= element.jk %></td>
+                    <td><%= element.nip %> </td>
+                    <td><%= element.status %> </td>
+                    <td><%= element.jenis %> </td>
+                    <td><%= element.agama %> </td>
+                </tr>
+        <% }); %> 
+        
+            </table>
+        </div>
+        </div> 
+        </main>
+
+    <!-- <section>
+        
+    </section> -->
+</div>

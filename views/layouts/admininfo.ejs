@@ -1,0 +1,17 @@
+<div class="inputdata">
+    <% listarray.forEach(element => { %>
+    <div class="card">
+        <div class="card-header">
+        <h2 class="title-info"><%= element.title %></h2>
+        </div>
+        <div class="card-body">
+        <h5 class="card-title"><%= element.tanggal %> </h5>
+        <img src="informasi/<%= element.gambar %> " alt="">
+        <p class="card-text"><%= element.isi %> </p>
+        </div>
+        <a  href="/admininfo?name=<%= element.title %> " class=" del btn btn-secondary">Delete</a>
+    </div>    
+    <%  }); %> 
+    
+    
+</div>

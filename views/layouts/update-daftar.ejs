@@ -1,0 +1,42 @@
+<div class="inputdata">
+    <form action="/admin-daftar" method="post">
+        <% var i = 0 %> 
+        <% array.forEach(element => { %>
+        <input type="hidden" name="halaman" value="<%- element["id"] %>">
+        <input type="hidden" name="title" value="<%- element["title"] %>">  
+        <div class="inputisi">
+            <div class="horizontal">
+                <label for="nama"><b> Nama : </b></label>
+                <input type="text" name="nama" value="<%=element["nama"]%>">
+            </div>
+            <div class="horizontal">
+                <label for="nuptk"><b> NUPTK :</b></label>
+                <input type="number" name="nuptk" value="<%=element["nuptk"]%>">
+            </div>
+            <div class="horizontal">
+                <label for="jk">Jenis Kelamin</label>
+                <input type="radio" name="jk" id="L" value="L" checked><label for="L">Laki - Laki</label>
+                <input type="radio" name="jk" id="P" value="P"><label for="P">Perempuan</label>
+            </div>
+            <div class="horizontal">
+                <label for="nip">Nip</label>
+                <input  type="number" name="nip" value="<%=element["nip"]%>">
+            </div>
+            <div class="horizontal">
+                <label for="status">Status</label>
+                <input type="text" name="status" value="<%=element["status"]%>">
+            </div>
+            <div class="horizontal">
+                <label for="jenis">Jenis jabatan</label>
+                <input type="text" name="jenis" value="<%=element["jenis"]%>">
+            </div>
+            <div class="horizontal">
+                <label for="agama">Agama</label>
+                <input type="text" name="agama" value="<%=element["agama"]%>">
+            </div>
+        </div>  
+        <% i++ %>      
+        <% }); %> 
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+</div>

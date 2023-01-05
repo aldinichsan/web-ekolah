@@ -1,0 +1,74 @@
+<div class="hero">  
+    <div class="judul">
+        <h1>SMAN Negeri 3 Bulukumba</h1>
+        <h3>JL. TANAHBERU, Tanah Beru, Kec. Bontobahari, Kab. Bulukumba      Prov. Sulawesi  Selatan</h3>
+    </div>
+</div>
+
+<div class="container-utama">
+    <main>
+        <h5 class="tanggal"><i class="far fa-clock"></i>date 19,desember 2021</h5>
+
+        <h1 class="judul-informasi"><i class="fa-thin fa-newspaper"></i>Informasi Terkini</h1>
+        <hr class="garis">
+        <% for (let i = 0; i <= 1; i++) {
+            var info = infolist[i];
+            var str = info["isi"]; 
+            var setengah = str.substr(0,190) ;%>
+
+        <div class="card">
+            <a href="/info" class="link">
+            <img src="informasi/<%= info["gambar"] %> " alt="">
+            <div class="penjelasan">
+                <h2><%= info["title"] %></h2>
+                <P><%= setengah %> .... <span class="read">Read More</span> </P>    
+            </div>
+            </a>
+        </div>
+        <% } %> 
+        
+    </main>
+
+    <section>
+        <div class="kata-sambutan">
+            <img class="foto-kepala" src="Kepalasekolah.jfif" alt="">
+            <h4>DRA. ANDI NIRWATI M.m,M.pd</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem dignissimos esse nemo dolorem id beatae? Corrupti eos dolorem deleniti quisquam aliquam deserunt est, eligendi inventore molestias laudantium ipsam atque. Recusandae, repudiandae officiis mollitia sequi dolorem, temporibus eius a in incidunt minus cumque quaerat ducimus facilis cum totam hic aut eligendi.</p>
+        </div>
+        <div class="akreditasi">
+            <img src="akreditasi.png" alt="">
+        </div>
+    </section>
+</div>
+
+<!-- bagian kegiatan -->
+<div class="container-kegiatan">
+    <h2><i class="far fa-image"></i>Kegiatan Seputar Sman 3 Bulukumba</h2>
+    <div id="picture" class="gallery">
+        <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+            <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                <i class="fas fa-angle-left fa-5x" style="color:#62A1FF"></i>
+            </li>
+        <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+            <i class="fas fa-angle-right fa-5x" style="color:#62A1FF"></i>          
+        </li>
+        </ul>
+        <div class="container-slider">
+        <div class="my-slider" id="slide">
+            <img class="picture" src="Kegiatan/kegiatan1.png" alt="">
+            
+            <img class="picture" src="Kegiatan/kegiatan2.png" alt="">
+            
+            <img class="picture" src="Kegiatan/kegiatan3.png" alt="">
+            
+            <img class="picture" src="Kegiatan/kegiatan4.png" alt="">
+            
+            <img class="picture" src="Kegiatan/kegiatan4.png" alt="">
+            
+    </div>
+</div> 
+         
+        
+    </div>
+</div>
+

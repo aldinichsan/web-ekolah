@@ -1,0 +1,28 @@
+<div class="container-utama">
+    <main>
+        <h5 class="tanggal"><i class="far fa-clock"></i>Date <%= date %> </h5>
+
+        <ul class="title">
+            <li>
+                <h3>O</h3>
+                <h1><%= judul %> </h1>
+            </li>
+        </ul>
+        <% var i = 0 %> 
+        <% isinya.forEach(element => { %>
+        <div class="isi-section">
+            <p><%= element["content"] %> </p>
+        </div>
+        <% i++ %> 
+        <% }); %> 
+        </main>
+
+    <section>
+        <div class="quote">
+            <img src="quote2.jpg" alt="">
+        </div>
+        <div class="quote">
+            <img src="quote1.jpg" alt="">
+        </div>
+    </section>
+</div>

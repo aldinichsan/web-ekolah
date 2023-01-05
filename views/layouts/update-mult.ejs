@@ -1,0 +1,18 @@
+<div class="inputdata">
+    <form action="/admin-mult" method="post" enctype="multipart/form-data">
+        <% var i = 0 %> 
+        <% array.forEach(element => { %>
+        <input type="file" name="gambar" value="">
+        <input type="hidden" name="halaman" value="<%- element["id"]%>">
+        <input type="hidden" name="title" value="<%- element["title"]%>">
+        <div class="inputisi">
+            <label for="title"><b> judul Content : </b></label>
+            <input type="text" name="judul" value="<%- element["judul"]%>">  
+            <label for="bagian"><b> isi Content : </b></label>
+            <textarea class="update" type="text" name="bagian" value=""><%- element["content"]%></textarea>        
+        </div>  
+        <% i++ %>      
+        <% }); %> 
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="inputdata">
+    <div class="add">
+        <a href="/add-sect?add=add-sect&halaman=<%-title%>" class="btn btn-outline-secondary">Add New Data</a>
+    </div>
+    <table class="table table-striped">
+            <tr class="daftar-head">
+                <th >No</th> 
+                <th >Content</th>
+                <th>Aksi</th>
+            </tr>
+    <% var i = 0 %> 
+    <% array.forEach(element => { %>
+    <% i++ %>
+            <tr>
+                <td><%= i %> </td>
+                <td><%= element["content"] %> </td>
+                <td><div class="inputisi">
+                        <div class="flexrow">
+                        <a href="/update?update=update-sect&halaman=<%- element["title"] %>&field=<%- element["id"] %> " class="btn btn-secondary">Update</a>  
+                        <a href="/pull-sect?halaman=<%- element["title"] %>&field=<%- element["id"] %> " class="btn btn-danger">Delete</a>  
+                        </div>       
+                    </div>
+                </form>
+                </td>
+            </tr>
+    <% }); %> 
+        </table>
+</div>

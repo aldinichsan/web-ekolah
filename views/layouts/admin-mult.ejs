@@ -1,0 +1,34 @@
+<div class="inputdata">
+    <div class="add">
+        <a href="/add-mult?add=add-mult&halaman=<%-title%>" class="btn btn-outline-secondary">Add New Data</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+                <tr class="daftar-head">
+                    <th >No</th> 
+                    <th>gambar</th>
+                    <th>judul</th>
+                    <th >Content</th>
+                    <th>Aksi</th>
+                </tr>
+        <% var i = 0 %> 
+        <% array.forEach(element => { %>
+        <% i++ %>
+                <tr>
+                    <td><%= i %> </td>
+                    <td><img class="img-adm" src="informasi/<%- element["gambar"] %> " alt=""></td>
+                    <td><%= element["judul"] %> </td>
+                    <td><%= element["content"] %> </td>
+                    <td><div class="inputisi">
+                            <div class="flexrow">
+                            <a href="/update?update=update-mult&halaman=<%- element["title"] %>&field=<%- element["id"] %> " class="btn btn-secondary">Update</a>  
+                            <a href="/pull-mult?halaman=<%- element["title"] %>&field=<%- element["id"] %> " class="btn btn-danger">Delete</a>  
+                            </div>       
+                        </div>
+                    </form>
+                    </td>
+                </tr>
+        <% }); %> 
+            </table>
+    </div>
+</div>

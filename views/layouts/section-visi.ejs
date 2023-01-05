@@ -1,0 +1,46 @@
+<div class="container-utama">
+    <main>
+        <h5 class="tanggal"><i class="far fa-clock"></i>Date <%= date %> </h5>
+
+        <ul class="title">
+            <li>
+                <h3>O</h3>
+                <h1>VISI MISI </h1>
+            </li>
+        </ul>
+        <ul class="visimisi-section">
+        <div class="visi-section">
+        <h5>Visi</h5>
+        
+        <% var i = 0 %> 
+        <% isi1.forEach(element => { %>
+            <ol>    
+                    <p> <%= element["content"] %> </p>
+                
+            </ol>
+        
+        <% i++ %>
+        <% }); %>
+        <h5>Misi</h5>
+        <% isi2.forEach(element => { %>
+                    <ul>
+                        <li>
+                            <p class="misi"> <%= element["content"] %> </p>
+                        </li>
+                    </ul>
+            
+        <% i++ %>
+        <% }); %> 
+        </div>
+        </ul>
+        </main>
+
+    <section>
+        <div class="quote">
+            <img src="quote2.jpg" alt="">
+        </div>
+        <div class="quote">
+            <img src="quote1.jpg" alt="">
+        </div>
+    </section>
+</div>

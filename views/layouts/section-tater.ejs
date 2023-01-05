@@ -1,0 +1,41 @@
+<div class="container-utama">
+    <main>
+        <h5 class="tanggal"><i class="far fa-clock"></i>Date <%= date %> </h5>
+
+        <ul class="title">
+            <li>
+                <h3>O</h3>
+                <h1><%= judul %> </h1>
+            </li>
+        </ul>
+        <% var i = 0 %> 
+        <% isinya.forEach(element => { %>
+        <div class="isi-section">
+            <ul>
+                <li>
+                    <p class="no-indent"><%= element["content"] %> </p>
+                </li>
+            </ul>
+        </div>
+        <% i++ %> 
+        <% }); %>
+        
+        <div class="catat">
+            <h6 class="catatan">Catatan : Setiap pelanggaran yang dilakukan akan mendapatkan sanksi</h6>
+            <p>Tanahberu, 28 april 2018</p>
+            <p>Kepala UPT Satuan Pedidikan</p>
+    
+            <h6 class="nama">Dra.Andi Nirwati M.M,M.Pd</h6>
+            <h6>Nip. 19700308 199412 2 003 </h6>
+        </div>
+        </main>
+
+    <section>
+        <div class="quote">
+            <img src="quote2.jpg" alt="">
+        </div>
+        <div class="quote">
+            <img src="quote1.jpg" alt="">
+        </div>
+    </section>
+</div>
